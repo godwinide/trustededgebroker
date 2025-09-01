@@ -1,0 +1,79 @@
+<link rel="icon" href="images/gpb_icon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="images/gpb_icon.png" type="image/x-icon" />
+<div id="et-info">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login | Trust Edge Broker</title>
+  <meta name="description" content="Starfxcrypto is your leading cryptocurrency investment and trading platform that offers Bitcoin trading options, provides 24/7 customer support, high level of security, and stable deposits and withdrawals.">
+  <meta name="keywords" content="Starfxcrypto, Bitcoin Investment, Bitcoin Trading Platform, Binary Trading Platform, Digital Options Trading, BTC, Cryptocurrency Investment">
+  <meta name="author" content="Starfxcrypto">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.png">
+  <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="b/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="b/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+	<div class="auth-logo">
+	   <a href="/"><img src="logo.png" class="mx-auto text-center" width="240"></a>
+	</div>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+						<div class="card-header">
+				<h3 class="text-center">Sign In</h3>
+			</div>
+			<div class="card-body">
+
+                
+				<form action="" method="post">
+					<%- include("./partials/messages") %>
+					<input type="hidden" name="csrf_token" value="cff6eb98d00ef62cdb20e416031c2424">					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+						</div>
+						<input type="email" name="email" class="form-control" placeholder="Email Address" required>
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" name="password" class="form-control" placeholder="Password" required>
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" name="submitbtn" value="Login" class="btn float-right login_btn">
+					</div>
+				</form>
+
+
+
+
+
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a href="signup">Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="change_password">Forgot your password?</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="//code.jivosite.com/widget/d3Uod7XaFA" async></script>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

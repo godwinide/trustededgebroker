@@ -1,0 +1,299 @@
+
+
+<link rel="icon" href="images/gpb_icon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="images/gpb_icon.png" type="image/x-icon" />
+
+<div id="et-info">
+<doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trade Center - Trust Edge Broker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/icon/favicon.png">
+    <link rel="stylesheet" href="/assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/metisMenu.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/default-css.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                   <a href="/"><img src="logo.png" class="mx-auto text-center" width="240"></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li class="">
+                                <a href="dashboard"><i class="fa fa-dashboard"></i><span>Trade Center</span></a>
+                            </li>
+                            <li class="">
+                                <a href="fund_account"><i class="fa fa-credit-card"></i><span>Fund Account</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="withdraw"><i class="fa fa-money"></i><span>Withdraw</span></a>
+                            </li>
+                            <li class="">
+                                <a href="account_upgrade"><i class="fa fa-arrow-up"></i><span>Account Upgrade</span></a>
+                            </li>
+                            <li class="">
+                                <a href="/history"><i class="fa fa-bar-chart"></i><span>Trade History</span></a>
+                            </li>
+                            <li class="">
+                                <a href="profile"><i class="fa fa-user"></i><span>Profile</span></a>
+                            </li>
+                            <li class="">
+                                <a href="change_password"><i class="fa fa-key"></i><span>Change Password</span></a>
+                            </li>
+                            <li class="">
+                                <a href="logout"><i class="fa fa-sign-out"></i><span>Logout</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area" style="background: #303641;">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-8 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-box pull-left">
+                            <div class="logo">
+                                <a href="/"><img src="logo.png" class="mx-auto text-center" width="240"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Dashboard</h4>
+                            <ul class="breadcrumbs pull-left">
+                                <li><a href="dashboard">Home</a></li>
+                                <li><span>Withdraw Funds</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix">
+                        <div class="user-profile pull-right">
+                            <h4 class="user-name"><%= req.user.fullname %></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="alert alert-success bg-success" role="alert">
+                            <div class="row">
+                              <div class="col-5">
+                                <p class="text-white"><b>Welcome</b></p>
+                              </div>
+                              <div class="col-7 text-right">
+                                <p class="text-white"><%= req.user.fullname %></p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-7">
+                                <p class="text-white"><b>Account Level:</b></p>
+                              </div>
+                              <div class="col-5 text-right">
+                                <p><strong>
+                                <span class="badge badge-warning"><%= req.user.account_plan %></span>                                </strong></p>
+                              </div>
+                            </div>
+                            
+                            <div class="row">
+                              <div class="col-5">
+                                <p class="text-white"><b>Balance:</b></p>
+                              </div>
+                              <div class="col-7 text-right">
+                                <p><strong>
+                                  <span class="badge badge-danger">$<%= comma(req.user.balance) %></span></strong></p>
+                              </div>
+                              
+                              </div>
+                            
+                            <div class="row">
+                              <div class="col-5">
+                                <p class="text-white"><b>Invested:</b></p>
+                              </div>
+                              <div class="col-7 text-right">
+                                <p class="text-white">$<%= comma(req.user.invested) %></p>
+                              </div>
+                            </div>
+                            
+                              <div class="row">
+                              <div class="col-5">
+                                <p class="text-white"><b>Profit:</b></p>
+                             </div>
+                              <div class="col-7 text-right">
+                                <p class="text-white">$<%= comma(req.user.profit) %></p>
+                              </div>
+                            </div>
+                            </div>
+                                            </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title"><i class="fa fa-money"></i> Withdrawal Request</h4>
+
+
+                                    <form method="post">
+                    					<%- include("./partials/messages") %>
+                                        <div class="form-group">
+                                            <label for="withdrawal_method">Withdrawal Method</label>
+                                            <select name="withdrawal_method" class="form-control input-lg" style="height: 40px;" id="withdrawalMethod" required>
+                                                <option value="">Select</option>
+                                                <option value="Bitcoin">Paypal</option>
+                                                <option value="Bank Transfer">Bank Transfer</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.form group -->
+
+                                        <div id="beneficiaryField1" class="form-group" style="display: none">
+                                            <label for="btc_address">Paypal Email</label>
+                                            <input class="form-control" type="text" name="email" placeholder="Enter Paypal email" id="btc_address">
+                                        </div>
+
+                                        <div id="beneficiaryField4" class="form-group" style="display: none">
+                                            <label for="bank_name">Bank Name</label>
+                                            <input class="form-control" type="text" name="bank_name" placeholder="Enter Bank Name" id="bank_name">
+                                        </div>
+                                        
+                                        <div id="beneficiaryField5" class="form-group" style="display: none">
+                                            <label for="acct_no">Account Number</label>
+                                            <input class="form-control" type="text" name="acct_no" placeholder="Enter Account Number" id="acct_no">
+                                        </div>
+
+                                        <div id="beneficiaryField6" class="form-group" style="display: none">
+                                            <label for="acct_name">Account Name</label>
+                                            <input class="form-control" type="text" name="acct_name" placeholder="Enter Account Name" id="acct_name">
+                                        </div>
+
+                                        <div id="beneficiaryField7">
+                                          <label for="amount">Enter Withdrawal Amount</label>
+                                          <input class="form-control" type="text" name="amount" placeholder="0.00" id="amount" required>
+                                        </div>       
+                                    <br> 
+                                </div>
+                                <button type="submit">Request</button>
+
+                </form>
+
+        <!-- main content area end -->
+<!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>Copyright &copy; 2010 - 2022. All right reserved. Trust Edge Broker</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <script src="//code.jivosite.com/widget/d3Uod7XaFA" async></script>
+
+    <!-- jquery latest version -->
+    <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/metisMenu.min.js"></script>
+    <script src="/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="/assets/js/jquery.slicknav.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/sweetalert2.min.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+    <script type="text/javascript">
+        $("#beneficiaryField").hide();
+        $("#beneficiaryField1").hide();
+        $("#beneficiaryField2").hide();
+        $("#beneficiaryField3").hide();
+        $("#beneficiaryField4").hide();
+        $("#beneficiaryField5").hide();
+        $("#beneficiaryField6").hide();
+        $("#beneficiaryField7").hide();
+        $(function () {
+        $("#withdrawalMethod").change(function () {
+            if ($(this).val() == "Bitcoin") {
+                $("#beneficiaryField1").fadeIn();
+                $("#beneficiaryField7").fadeIn();
+                $("#beneficiaryField").fadeIn();
+                $("#beneficiaryField3").hide();
+                $("#beneficiaryField4").hide();
+                $("#beneficiaryField5").hide();
+                $("#beneficiaryField6").hide();
+            } else if ($(this).val() == "Bank Transfer") {
+                $("#beneficiaryField4").fadeIn();
+                $("#beneficiaryField5").fadeIn();
+                $("#beneficiaryField6").fadeIn();
+                $("#beneficiaryField7").fadeIn();
+                $("#beneficiaryField").fadeIn();
+                $("#beneficiaryField1").hide();
+                $("#beneficiaryField2").hide();
+                $("#beneficiaryField3").hide();
+            } else {
+                $("#beneficiaryField1").hide();
+                $("#beneficiaryField2").hide();
+                $("#beneficiaryField3").hide();
+                $("#beneficiaryField4").hide();
+                $("#beneficiaryField5").hide();
+                $("#beneficiaryField6").hide();
+                $("#beneficiaryField7").hide();
+            }
+        });
+        });
+    </script>
+</body>
+</html>
