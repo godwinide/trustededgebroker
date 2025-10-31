@@ -4,7 +4,7 @@ module.exports = {
       return next();
     }
     req.flash('error_msg', 'Login required');
-    res.redirect('/signin');
+    res.redirect(303, '/signin');
   },
   ensureAdmin: function (req, res, next) {
     if (req.isAuthenticated()) {
@@ -12,15 +12,15 @@ module.exports = {
         return next();
       }
       req.flash('error_msg', 'Login required');
-      res.redirect('/admin/signin');
+      res.redirect(303, '/admin/signin');
     }
     req.flash('error_msg', 'Login required');
-    res.redirect('/admin/signin');
+    res.redirect(303, '/admin/signin');
   },
   forwardAuthenticated: function (req, res, next) {
     if (req.isAuthenticated()) {
       return next();
     }
-    res.redirect('/');
+    res.redirect(303, '/');
   }
 };
