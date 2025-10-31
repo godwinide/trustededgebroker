@@ -7,7 +7,7 @@ router.get("/signin", (req,res) => {
     try{
         return res.render("admin/signin", {layout:"admin/layout", pageTitle: "Login"});
     }catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -29,7 +29,7 @@ router.get("/signup", (req,res) => {
     try{
         return res.render("admin/signup", {layout:"admin/layout", pageTitle: "Signup"});
     }catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -59,7 +59,7 @@ router.post('/signup', async (req,res) => {
                 const _newUser = new User(newUser);
                 await _newUser.save();
                 req.flash("success_msg", "Register success, you can now login");
-                return res.redirect("/admin/signin");
+                return res.redirect(303, "/admin/signin");
             }
         }
     }catch(err){

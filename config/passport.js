@@ -21,6 +21,7 @@ module.exports = function(passport) {
           if (isMatch) {
             return done(null, user);
           } else {
+            conosle.log("invalid password")
             return done(null, false, { message: 'invalid username or password' });
           }
         });

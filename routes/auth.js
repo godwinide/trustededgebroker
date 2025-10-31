@@ -9,7 +9,7 @@ router.get("/signin", (req, res) => {
     try {
         return res.render("signin", { pageTitle: "Login" });
     } catch (err) {
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -32,7 +32,7 @@ router.get("/signup", (req, res) => {
     try {
         return res.render("signup", { pageTitle: "Signup" });
     } catch (err) {
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -82,7 +82,7 @@ router.post('/signup', async (req, res) => {
                 const _newUser = new User(newUser);
                 await _newUser.save();
                 req.flash("success_msg", "Register success, you can now login");
-                return res.redirect("/signin");
+                return res.redirect(303, "/signin");
             }
         }
     } catch (err) {

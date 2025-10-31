@@ -28,4 +28,4 @@ const HistorySchema = new Schema({
     }
 });
 
-module.exports = History = model("History", HistorySchema);
+module.exports = model("History", HistorySchema);

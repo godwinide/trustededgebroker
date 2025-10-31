@@ -5,7 +5,7 @@ router.get("/", (req,res) => {
         return res.render("index", {pageTitle: "Welcome", req});
     }
     catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -14,7 +14,7 @@ router.get("/about", (req,res) => {
         return res.render("about", {pageTitle: "About Us", req});
     }
     catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -23,7 +23,7 @@ router.get("/investment", (req,res) => {
         return res.render("investment", {pageTitle: "Investment", req});
     }
     catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -32,7 +32,7 @@ router.get("/partners", (req,res) => {
         return res.render("partners", {pageTitle: "Partners", req});
     }
     catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -41,7 +41,7 @@ router.get("/contact", (req,res) => {
         return res.render("support", {pageTitle: "contact", req});
     }
     catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -50,7 +50,7 @@ router.get("/terms", (req,res) => {
         return res.render("terms", {pageTitle: "Terms", req});
     }
     catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 
@@ -59,7 +59,7 @@ router.get("/forgot_password", (req,res) => {
         return res.render("forgot", {pageTitle: "Forgot Password"});
     }
     catch(err){
-        return res.redirect("/");
+        return res.redirect(303, "/");
     }
 });
 

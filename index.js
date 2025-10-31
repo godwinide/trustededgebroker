@@ -5,7 +5,6 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require("passport")
 const expressLayout = require("express-ejs-layouts");
-const fileUpload = require("express-fileupload");
 
 // CONFIGS
 require("dotenv").config();
@@ -20,7 +19,6 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(express.json());
-app.use(fileUpload({}))
 app.use(flash());
 app.use(
   session({
@@ -41,7 +39,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-const PORT = process.env.PORT || 2022;
+const PORT = process.env.PORT;
 
 // URLS
 // app.use("*", require("./routes/down"))
