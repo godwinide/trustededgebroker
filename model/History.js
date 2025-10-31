@@ -1,4 +1,4 @@
-const { model, Schema } = require("mongoose");
+const { model, Schema, models } = require("mongoose");
 
 const HistorySchema = new Schema({
     amount: {
@@ -28,4 +28,4 @@ const HistorySchema = new Schema({
     }
 });
 
-module.exports = model("History", HistorySchema);
+module.exports = models.History || model("History", HistorySchema);
