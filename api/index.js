@@ -53,7 +53,7 @@ const createApp = async () => {
         resave: false,
         saveUninitialized: false,
         store: MongoStore.create({
-            mongoUrl: process.env.MONGO_URI,
+            mongoUrl: process.env.DB_URI,
             touchAfter: 24 * 3600,
             crypto: {
                 secret: process.env.SESSION_SECRET || 'secret'
